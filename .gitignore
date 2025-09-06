@@ -1,0 +1,7 @@
+uploads/
+debug_output/
+build/
+ios/Flutter/
+ios/Runner/GeneratedPluginRegistrant.*
+android/app/google-services.json
+*.lock

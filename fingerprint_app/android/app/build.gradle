@@ -1,0 +1,51 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    // Ensure this namespace matches your applicationId
+    namespace "myfyp.fingerprintapp"
+    compileSdkVersion 36 // Match it with OpenCV
+
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // Unique Application ID (Make sure this matches in AndroidManifest.xml)
+        applicationId = "myfyp.fingerprintapp"
+
+        // Set minimum and target SDK versions explicitly
+        minSdkVersion 21  // Set your required minSdk
+        targetSdkVersion 36
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false  // Keep code shrinking disabled
+            shrinkResources false  // Disable resource shrinking
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+

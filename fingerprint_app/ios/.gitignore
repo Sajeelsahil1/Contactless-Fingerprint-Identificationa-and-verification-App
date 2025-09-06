@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Flask uploads/debug
+uploads/
+debug_output/
+
+# Flutter build
+build/
+. dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# iOS/Android generated files
+ios/Flutter/
+ios/Runner/GeneratedPluginRegistrant.*
+android/.gradle/
+android/app/build/
+
+# VSCode/IDE
+.vscode/
+.idea/
